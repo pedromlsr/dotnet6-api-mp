@@ -28,6 +28,7 @@ namespace MP.ApiDotNet6.Infra.Data.Repositories
         {
             _db.Add(person);
             await _db.SaveChangesAsync();
+
             return person;
         }
 
