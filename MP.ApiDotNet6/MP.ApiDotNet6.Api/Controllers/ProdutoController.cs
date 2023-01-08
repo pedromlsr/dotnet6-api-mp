@@ -6,19 +6,19 @@ namespace MP.ApiDotNet6.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : ControllerBase
+    public class PersonController : ControllerBase
     {
-        private readonly IProductService _productService;
+        private readonly IPersonService _personService;
 
-        public ProductController(IProductService productService)
+        public PersonController(IPersonService personService)
         {
-            _productService = productService;
+            _personService = personService;
         }
 
         [HttpGet]
         public async Task<ActionResult> GetByIdAsync()
         {
-            var result = await _productService.GetByIdAsync();
+            var result = await _personService.GetByIdAsync();
 
             if(result.IsSuccess) return Ok(result);
 
@@ -29,7 +29,7 @@ namespace MP.ApiDotNet6.Api.Controllers
         [Route("{id}")]
         public async Task<ActionResult> GetAllAsync(int id)
         {
-            var result = await _productService.GetByIdAsync(id);
+            var result = await _personService.GetByIdAsync(id);
 
             if(result.IsSuccess) return Ok(result);
 
@@ -37,9 +37,9 @@ namespace MP.ApiDotNet6.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> CreateAsync([FromBody] ProductDTO productDTO)
+        public async Task<ActionResult> CreateAsync([FromBody] PersonDTO personDTO)
         {
-            var result = await _productService.CreateAsync(productDTO);
+            var result = await _personService.CreateAsync(personDTO);
             
             if(result.IsSuccess) return Ok(result);
 
@@ -47,9 +47,9 @@ namespace MP.ApiDotNet6.Api.Controllers
         }
 
         [HttpPut]
-        public async Task<ActionResult> EditAsync([FromBody] ProductDTO productDTO)
+        public async Task<ActionResult> EditAsync([FromBody] PersonDTO personDTO)
         {
-            var result = await _productService.EditAsync(productDTO);
+            var result = await _personService.EditAsync(personDTO);
 
             if (result.IsSuccess) return Ok(result);
 
@@ -60,7 +60,7 @@ namespace MP.ApiDotNet6.Api.Controllers
         [Route("{id}")]
         public async Task<ActionResult> DeleteAsync(int id)
         {
-            var result = await _productService.DeleteAsync(id);
+            var result = await _personService.DeleteAsync(id);
 
             if (result.IsSuccess) return Ok(result);
 
