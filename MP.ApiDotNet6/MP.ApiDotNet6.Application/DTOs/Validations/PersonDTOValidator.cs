@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using System.Security.Cryptography.X509Certificates;
 
 namespace MP.ApiDotNet6.Application.DTOs.Validations
 {
