@@ -17,7 +17,7 @@ namespace MP.ApiDotNet6.Domain.Entities
 
         public Person(int id, string name, string document, string phone)
         {
-            DomainValidationException.When(id < 0, "Id deve ser maior que zero!");
+            DomainValidationException.When(id < 0, "Id da pessoa deve ser informado!");
 
             Id = id;
 
@@ -28,7 +28,7 @@ namespace MP.ApiDotNet6.Domain.Entities
         {
             DomainValidationException.When(string.IsNullOrEmpty(name), "Nome deve ser informado!");
             DomainValidationException.When(string.IsNullOrEmpty(document), "Documento deve ser informado!");
-            DomainValidationException.When(string.IsNullOrEmpty(phone), "Telefone deve ser informado!");
+            DomainValidationException.When(string.IsNullOrEmpty(phone), "Celular deve ser informado!");
 
             Name = name;
             Document = document;

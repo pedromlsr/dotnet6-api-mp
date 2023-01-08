@@ -18,7 +18,7 @@ namespace MP.ApiDotNet6.Domain.Entities
 
         public Purchase(int id, int personId, int productId, DateTime? date)
         {
-            DomainValidationException.When(id < 0, "Id deve ser informado!");
+            DomainValidationException.When(id < 0, "Id da compra deve ser informado!");
 
             Id = id;
 
