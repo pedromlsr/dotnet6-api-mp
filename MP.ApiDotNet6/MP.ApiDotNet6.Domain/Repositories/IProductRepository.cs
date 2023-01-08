@@ -6,6 +6,7 @@ namespace MP.ApiDotNet6.Domain.Repositories
     {
         Task<ICollection<Product>> GetAllAsync();
         Task<Product> GetByIdAsync(int id);
+        Task<int> GetIdByCodErpAsync(string codErp);
         Task<Product> CreateAsync(Product Product);
         Task EditAsync(Product Product);
         Task DeleteAsync(Product Product);

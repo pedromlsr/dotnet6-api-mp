@@ -6,6 +6,7 @@ namespace MP.ApiDotNet6.Domain.Repositories
     {
         Task<ICollection<Person>> GetAllAsync();
         Task<Person> GetByIdAsync(int id);
+        Task<int> GetIdByDocumentAsync(string document);
         Task<Person> CreateAsync(Person person);
         Task EditAsync(Person person);
         Task DeleteAsync(Person person);
