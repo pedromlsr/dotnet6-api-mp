@@ -11,30 +11,28 @@ namespace MP.ApiDotNet6.Domain.Entities
         public Person Person{ get; private set; }
         public Product Product{ get; private set; }
 
-        public Purchase(int personId, int productId, DateTime? date)
+        public Purchase(int personId, int productId)
         {
-            Validation(personId, productId, date);
+            Validation(personId, productId);
         }
 
-        public Purchase(int id, int personId, int productId, DateTime? date)
+        public Purchase(int id, int personId, int productId)
         {
             DomainValidationException.When(id < 0, "Id da compra deve ser informado!");
 
             Id = id;
 
-            Validation(personId, productId, date);
+            Validation(personId, productId);
         }
 
-
-        private void Validation(int personId, int productId, DateTime? date)
+        private void Validation(int personId, int productId)
         {
             DomainValidationException.When(personId < 0, "Id da pessoa deve ser informado!");
             DomainValidationException.When(productId < 0, "Id do produto deve ser informado!");
-            DomainValidationException.When(!date.HasValue, "Data da compra deve ser informada!");
 
             PersonId = personId;
             ProductId = productId;
-            Date = date.Value;
+            Date = DateTime.Now;
         }
     }
 }

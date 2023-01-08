@@ -11,14 +11,14 @@ namespace MP.ApiDotNet6.Infra.Data.Maps
             builder.ToTable("Compra");
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id)
-                .HasColumnName("IdCompra")
+                .HasColumnName("Idcompra")
                 .UseIdentityColumn();
             builder.Property(x => x.PersonId)
-                .HasColumnName("IdPessoa");
+                .HasColumnName("Idpessoa");
             builder.Property(x => x.ProductId)
-                .HasColumnName("IdProduto");
+                .HasColumnName("Idproduto");
             builder.Property(x => x.Date)
-                .HasColumnName("DataCompra");
+                .HasColumnName("Datacompra");
             builder.HasOne(x => x.Person)
                 .WithMany(p => p.Purchases)
                 .HasForeignKey(x => x.ProductId);

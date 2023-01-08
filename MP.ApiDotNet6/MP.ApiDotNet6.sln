@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP.ApiDotNet6.Domain", "MP.ApiDotNet6.Domain\MP.ApiDotNet6.Domain.csproj", "{41491B2E-4439-4214-84D9-12A369511631}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MP.ApiDotNet6.Domain", "MP.ApiDotNet6.Domain\MP.ApiDotNet6.Domain.csproj", "{41491B2E-4439-4214-84D9-12A369511631}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP.ApiDotNet6.Infra.Data", "MP.ApiDotNet6.Infra.Data\MP.ApiDotNet6.Infra.Data.csproj", "{BCB66375-3A4A-4783-9A7E-D1486C6E5C15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MP.ApiDotNet6.Infra.Data", "MP.ApiDotNet6.Infra.Data\MP.ApiDotNet6.Infra.Data.csproj", "{BCB66375-3A4A-4783-9A7E-D1486C6E5C15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP.ApiDotNet6.Infra.IoC", "MP.ApiDotNet6.Infra.IoC\MP.ApiDotNet6.Infra.IoC.csproj", "{6A5C963E-8427-4D1B-A72D-3BF3D7C2D896}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MP.ApiDotNet6.Infra.IoC", "MP.ApiDotNet6.Infra.IoC\MP.ApiDotNet6.Infra.IoC.csproj", "{6A5C963E-8427-4D1B-A72D-3BF3D7C2D896}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP.ApiDotNet6.Application", "MP.ApiDotNet6.Application\MP.ApiDotNet6.Application.csproj", "{6FA7A630-D84E-4AB6-89F1-6D42BB80C302}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MP.ApiDotNet6.Application", "MP.ApiDotNet6.Application\MP.ApiDotNet6.Application.csproj", "{6FA7A630-D84E-4AB6-89F1-6D42BB80C302}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP.ApiDotNet6.Api", "MP.ApiDotNet6.Api\MP.ApiDotNet6.Api.csproj", "{CC0C9282-4263-44D9-8CE8-F1F6108DE7F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP.ApiDotNet6.Api", "MP.ApiDotNet6.Api\MP.ApiDotNet6.Api.csproj", "{3A923402-0B2C-4500-A4FD-5A7B1B9F9796}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{6FA7A630-D84E-4AB6-89F1-6D42BB80C302}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FA7A630-D84E-4AB6-89F1-6D42BB80C302}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FA7A630-D84E-4AB6-89F1-6D42BB80C302}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CC0C9282-4263-44D9-8CE8-F1F6108DE7F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC0C9282-4263-44D9-8CE8-F1F6108DE7F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC0C9282-4263-44D9-8CE8-F1F6108DE7F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC0C9282-4263-44D9-8CE8-F1F6108DE7F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A923402-0B2C-4500-A4FD-5A7B1B9F9796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A923402-0B2C-4500-A4FD-5A7B1B9F9796}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A923402-0B2C-4500-A4FD-5A7B1B9F9796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A923402-0B2C-4500-A4FD-5A7B1B9F9796}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
