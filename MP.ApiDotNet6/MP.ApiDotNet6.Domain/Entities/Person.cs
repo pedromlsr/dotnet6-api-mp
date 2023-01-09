@@ -18,7 +18,7 @@ namespace MP.ApiDotNet6.Domain.Entities
 
         public Person(int id, string name, string document, string phone)
         {
-            DomainValidationException.When(id < 0, "Id da pessoa deve ser informado!");
+            DomainValidationException.When(id <= 0, "Id da pessoa deve ser informado!");
 
             Id = id;
 

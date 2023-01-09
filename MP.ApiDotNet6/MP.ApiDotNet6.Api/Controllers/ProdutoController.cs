@@ -16,9 +16,9 @@ namespace MP.ApiDotNet6.Api.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> GetByIdAsync()
+        public async Task<ActionResult> GetAllAsync()
         {
-            var result = await _personService.GetByIdAsync();
+            var result = await _personService.GetAllAsync();
 
             if(result.IsSuccess) return Ok(result);
 
@@ -27,7 +27,7 @@ namespace MP.ApiDotNet6.Api.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public async Task<ActionResult> GetAllAsync(int id)
+        public async Task<ActionResult> GetByIdAsync(int id)
         {
             var result = await _personService.GetByIdAsync(id);
 

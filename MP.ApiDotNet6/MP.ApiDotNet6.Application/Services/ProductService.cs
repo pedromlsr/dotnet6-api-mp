@@ -18,7 +18,7 @@ namespace MP.ApiDotNet6.Application.Services
             _mapper = mapper;
         }
 
-        public async Task<ResultService<ICollection<ProductDTO>>> GetByIdAsync()
+        public async Task<ResultService<ICollection<ProductDTO>>> GetAllAsync()
         {
             var products = await _productRepository.GetAllAsync();
 
@@ -52,7 +52,7 @@ namespace MP.ApiDotNet6.Application.Services
 
         public async Task<ResultService> EditAsync(ProductDTO productDTO)
         {
-            if (productDTO == null) return ResultService.Fail("Objeto deve ser informado!");
+            if (productDTO == null) return ResultService.Fail<ProductDTO>("Objeto deve ser informado!");
 
             var result = new ProductDTOValidator().Validate(productDTO);
 
@@ -61,7 +61,7 @@ namespace MP.ApiDotNet6.Application.Services
 
             var product = await _productRepository.GetByIdAsync(productDTO.Id);
 
-            if (product == null) return ResultService.Fail("Produto não encontrado!");
+            if (product == null) return ResultService.Fail<ProductDTO>("Produto não encontrado!");
 
             product = _mapper.Map(productDTO, product);
             await _productRepository.EditAsync(product);
@@ -73,9 +73,10 @@ namespace MP.ApiDotNet6.Application.Services
         {
             var product = await _productRepository.GetByIdAsync(id);
 
-            if (product == null) return ResultService.Fail("Produto não encontrado!");
+            if (product == null) return ResultService.Fail<ProductDTO>("Produto não encontrado!");
 
             await _productRepository.DeleteAsync(product);
+
             return ResultService.Ok($"Produto de id:{id} foi deletado com sucesso.");
         }
     }
