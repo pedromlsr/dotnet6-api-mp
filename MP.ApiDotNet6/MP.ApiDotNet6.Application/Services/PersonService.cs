@@ -3,6 +3,7 @@ using MP.ApiDotNet6.Application.DTOs;
 using MP.ApiDotNet6.Application.DTOs.Validations;
 using MP.ApiDotNet6.Application.Services.Interfaces;
 using MP.ApiDotNet6.Domain.Entities;
+using MP.ApiDotNet6.Domain.FiltersDb;
 using MP.ApiDotNet6.Domain.Repositories;
 
 namespace MP.ApiDotNet6.Application.Services
@@ -23,6 +24,15 @@ namespace MP.ApiDotNet6.Application.Services
             var people = await _personRepository.GetAllAsync();
 
             return ResultService.Ok(_mapper.Map<ICollection<PersonDTO>>(people));
+        }
+
+        public async Task<ResultService<PagedBaseResponseDTO<PersonDTO>>> GetPagedAsync(PersonFilterDb personFilterDb)
+        {
+            var peoplePaged = await _personRepository.GetPagedAsync(personFilterDb);
+            var result = new PagedBaseResponseDTO<PersonDTO>(
+                peoplePaged.TotalRegisters, _mapper.Map<List<PersonDTO>>(peoplePaged.Data));
+
+            return ResultService.Ok(result);
         }
 
         public async Task<ResultService<PersonDTO>> GetByIdAsync(int id)
